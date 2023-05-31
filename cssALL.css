@@ -63,6 +63,18 @@ body{
     color: #e4e4e4;
     padding-left: 10px;
 }
+.icon-container {
+  position: relative; /* Устанавливаем позицию элемента как относительную */
+}
+
+.icon {
+  position: absolute; /* Устанавливаем позицию иконки как абсолютную */
+  top: 0; /* Устанавливаем отступ сверху */
+  left: 0; /* Устанавливаем отступ слева */
+  z-index: 1; /* Устанавливаем значение z-index для отображения на переднем плане */
+}
+
+
 .search-bar input::placeholder{
     
     color: #e4e4e4;
@@ -305,6 +317,15 @@ body{
 .footer-col .social-links a:hover{
 	color: #24262b;
 	background-color: #ffffff;
+}
+.custom-card {
+  background-size: cover; /* Заполнение области картинки без искажений */
+  background-position: center; /* Выравнивание изображения по центру */
+  background-repeat: no-repeat; /* Запрет повторения изображения */
+  max-height: 200px; /* Максимальная высота карточки */
+  width: 100%; /* Ширина карточки равна 100% от родительского элемента */
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 /*responsive*/
