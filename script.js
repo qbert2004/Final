@@ -133,3 +133,8 @@ window.onload = function () {
 document.querySelector(".modalclose").addEventListener("click", function () {
 	document.querySelector(".site").classList.remove("showmodal");
 });
+
+const search = () =>{
+    const searchbox = document.getElementById(search).value.toUpperCase();
+    const storeitem = document.getElementById(products)
+}

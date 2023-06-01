@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
     <div id="page" class="site page-home">
@@ -68,10 +70,10 @@
                             <div class="logo"><a href="/"><span class="circle"></span>.Store</a></div>
                             <nav class="mobile-hide">
                                 <ul class="flexitem second-links">
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="Home.html">Home</a></li>
                                     <li><a href="#">Shop</a></li>
                                     <li class="has-child">
-                                        <a href="page-category.html">Women
+                                        <a href="Category.html">Women
                                             <div class="icon-small"><i class="ri-arrow-down-s-line"></i></div>
                                         </a>
                                         <div class="mega">
@@ -515,7 +517,7 @@
                                         </div>
                                         <div class="media">
                                             <div class="image">
-                                                <a href="page-offer.html">
+                                                <a href="#">
                                                     <img src="assets/products/apparel4.jpg" alt="">
                                                 </a>
                                             </div>
@@ -1219,7 +1221,7 @@
                     </div>
                 </div>
             </div>
-
+            <button id="mute-button" class="btn">Mute</button>
         </main>
         <!-- Main -->
 
@@ -1401,6 +1403,17 @@
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Dec 13, 2023 15:13:00").getTime();
+const audio = new Audio('bm.mp3');
+const muteButton = document.getElementById('mute-button');
+muteButton.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+    muteButton.textContent = 'Mute';
+  } else {
+    audio.pause();
+    muteButton.textContent = 'Unmute';
+  }
+});
 
 // Update the count down every 1 second
 var x = setInterval(function() {
